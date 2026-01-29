@@ -20,7 +20,6 @@ jobs:
       matrix:
         build: [
           {platform: linux/amd64, cache: amd64},
-          {platform: linux/arm64, cache: arm64},
         ]
     permissions:
       contents: read
@@ -109,7 +108,7 @@ jobs:
           
           for TAG in "${TAGS[@]}"; do
             MANIFEST_IMAGES=""
-            for CACHE in "amd64" "arm64"; do
+            for CACHE in "amd64"; do
               MANIFEST_IMAGES="$MANIFEST_IMAGES ${TAG}-$CACHE"
             done
             
