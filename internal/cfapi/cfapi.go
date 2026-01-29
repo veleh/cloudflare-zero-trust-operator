@@ -3,10 +3,10 @@ package cfapi
 import (
 	"context"
 
-	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfcollections"
-	"github.com/veleh/cloudflare-zero-trust-operator/internal/cftypes"
 	cloudflare "github.com/cloudflare/cloudflare-go"
 	"github.com/pkg/errors"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfcollections"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cftypes"
 )
 
 type API struct {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
-	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfapi"
 	"github.com/cloudflare/cloudflare-go"
 	"github.com/pkg/errors"
+	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfapi"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	logger "sigs.k8s.io/controller-runtime/pkg/log"

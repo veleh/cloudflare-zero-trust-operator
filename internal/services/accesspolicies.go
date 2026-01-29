@@ -3,9 +3,9 @@ package services
 import (
 	"context"
 
-	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
 	"github.com/go-logr/logr"
 	"github.com/pkg/errors"
+	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

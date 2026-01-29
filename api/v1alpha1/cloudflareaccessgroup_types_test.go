@@ -5,10 +5,10 @@ import (
 
 	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfapi"
 
-	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
 	cloudflare "github.com/cloudflare/cloudflare-go"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
 	// +kubebuilder:scaffold:imports
 )
 

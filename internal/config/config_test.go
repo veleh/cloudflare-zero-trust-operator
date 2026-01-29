@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/veleh/cloudflare-zero-trust-operator/internal/config"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/config"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

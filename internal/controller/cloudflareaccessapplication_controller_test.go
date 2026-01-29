@@ -6,10 +6,10 @@ import (
 	"context"
 	"time"
 
-	v1alpha1 "github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
-	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfcollections"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	v1alpha1 "github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfcollections"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
