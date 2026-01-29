@@ -4,10 +4,10 @@ Cloudflare Zero-Trust operator allow you to manage your zero-trust configuration
 
 <!-- Version_Placeholder -->
 ![Version: 0.7.1](https://img.shields.io/badge/Version-0.7.1-informational?style=flat-square)
-[![CRD - reference](https://img.shields.io/badge/CRD-reference-2ea44f)](https://doc.crds.dev/github.com/BojanZelic/cloudflare-zero-trust-operator)
-![Unit Tests](https://github.com/BojanZelic/cloudflare-zero-trust-operator/actions/workflows/unit.yaml/badge.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/bojanzelic/cloudflare-zero-trust-operator)](https://goreportcard.com/report/github.com/bojanzelic/cloudflare-zero-trust-operator)
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/bojanzelic/cloudflare-zero-trust-operator)](https://pkg.go.dev/github.com/bojanzelic/cloudflare-zero-trust-operator)
+[![CRD - reference](https://img.shields.io/badge/CRD-reference-2ea44f)](https://doc.crds.dev/github.com/veleh/cloudflare-zero-trust-operator)
+![Unit Tests](https://github.com/veleh/cloudflare-zero-trust-operator/actions/workflows/unit.yaml/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/veleh/cloudflare-zero-trust-operator)](https://goreportcard.com/report/github.com/veleh/cloudflare-zero-trust-operator)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/veleh/cloudflare-zero-trust-operator)](https://pkg.go.dev/github.com/veleh/cloudflare-zero-trust-operator)
 [![codecov](https://codecov.io/gh/BojanZelic/cloudflare-zero-trust-operator/branch/main/graph/badge.svg?token=BRSGWWVA2W)](https://codecov.io/gh/BojanZelic/cloudflare-zero-trust-operator)
 
 ## Example Usage
@@ -163,7 +163,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - https://github.com/BojanZelic/cloudflare-zero-trust-operator//config/default?ref=main
+  - https://github.com/veleh/cloudflare-zero-trust-operator//config/default?ref=main
 
 secretGenerator:
 - name: cloudflare-creds

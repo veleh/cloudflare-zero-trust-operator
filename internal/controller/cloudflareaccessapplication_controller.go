@@ -19,12 +19,12 @@ package controller
 import (
 	"context"
 
-	v1alpha1 "github.com/bojanzelic/cloudflare-zero-trust-operator/api/v1alpha1"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/cfapi"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/cfcollections"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/config"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/ctrlhelper"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/services"
+	v1alpha1 "github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfapi"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfcollections"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/config"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/ctrlhelper"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/services"
 	cloudflare "github.com/cloudflare/cloudflare-go"
 	"github.com/pkg/errors"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"

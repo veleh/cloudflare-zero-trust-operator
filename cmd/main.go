@@ -35,10 +35,10 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	cloudflarev1 "github.com/bojanzelic/cloudflare-zero-trust-operator/api/v1alpha1"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/config"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/controller"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/ctrlhelper"
+	cloudflarev1 "github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/config"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/controller"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/ctrlhelper"
 	// +kubebuilder:scaffold:imports
 )
 

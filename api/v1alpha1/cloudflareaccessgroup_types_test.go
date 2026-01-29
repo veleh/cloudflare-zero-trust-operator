@@ -3,9 +3,9 @@ package v1alpha1_test
 import (
 	"testing"
 
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/cfapi"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfapi"
 
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
 	cloudflare "github.com/cloudflare/cloudflare-go"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

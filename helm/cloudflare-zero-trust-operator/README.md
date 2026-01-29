@@ -6,7 +6,7 @@ Operator for managing Cloudflare Zero Trust settings
 
 Cloudflare Zero-Trust operator allow you to manage your zero-trust configuration directly from kubernetes.
 
-**Homepage:** <https://github.com/bojanzelic/cloudflare-zero-trust-operator>
+**Homepage:** <https://github.com/veleh/cloudflare-zero-trust-operator>
 
 ## Values
 
