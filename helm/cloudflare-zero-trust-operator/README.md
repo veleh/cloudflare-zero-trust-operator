@@ -1,6 +1,6 @@
 # cloudflare-zero-trust-operator
 
-![Version: 0.7.1](https://img.shields.io/badge/Version-0.7.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.7.1](https://img.shields.io/badge/AppVersion-0.7.1-informational?style=flat-square)
+![Version: 0.7.2](https://img.shields.io/badge/Version-0.7.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.7.2](https://img.shields.io/badge/AppVersion-0.7.2-informational?style=flat-square)
 
 Operator for managing Cloudflare Zero Trust settings
 
@@ -18,7 +18,7 @@ Cloudflare Zero-Trust operator allow you to manage your zero-trust configuration
 | cloudflare_api_token | string | `""` | Cloudflare API Token - required (one of cloudflare_api_token or cloudflare_api_key + cloudflare_api_email) (or set secretRef) |
 | fullnameOverride | string | `""` | override name for helm chart |
 | image.pullPolicy | string | `"IfNotPresent"` | manager pullPolicy |
-| image.repository | string | `"ghcr.io/bojanzelic/cloudflare-zero-trust-operator"` | manager image repo |
+| image.repository | string | `"ghcr.io/veleh/cloudflare-zero-trust-operator"` | manager image repo |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` | config reference for pulling containers |
 | manager.resources | object | `{}` | limits & requests(cpu & memory) to apply to the manager container |

@@ -104,6 +104,24 @@ spec:
                     everyone:
                       description: Allow Everyone
                       type: boolean
+                    gitHubOrganizations:
+                      description: GitHub Organizations
+                      items:
+                        properties:
+                          identityProviderId:
+                            description: Identity Provider Id
+                            type: string
+                          name:
+                            description: Name of the GitHub organization
+                            type: string
+                          team:
+                            description: Team within the GitHub organization (optional)
+                            type: string
+                        required:
+                        - identityProviderId
+                        - name
+                        type: object
+                      type: array
                     googleGroups:
                       description: Matches Google Group
                       items:
@@ -257,6 +275,24 @@ spec:
                     everyone:
                       description: Allow Everyone
                       type: boolean
+                    gitHubOrganizations:
+                      description: GitHub Organizations
+                      items:
+                        properties:
+                          identityProviderId:
+                            description: Identity Provider Id
+                            type: string
+                          name:
+                            description: Name of the GitHub organization
+                            type: string
+                          team:
+                            description: Team within the GitHub organization (optional)
+                            type: string
+                        required:
+                        - identityProviderId
+                        - name
+                        type: object
+                      type: array
                     googleGroups:
                       description: Matches Google Group
                       items:
@@ -413,6 +449,24 @@ spec:
                     everyone:
                       description: Allow Everyone
                       type: boolean
+                    gitHubOrganizations:
+                      description: GitHub Organizations
+                      items:
+                        properties:
+                          identityProviderId:
+                            description: Identity Provider Id
+                            type: string
+                          name:
+                            description: Name of the GitHub organization
+                            type: string
+                          team:
+                            description: Team within the GitHub organization (optional)
+                            type: string
+                        required:
+                        - identityProviderId
+                        - name
+                        type: object
+                      type: array
                     googleGroups:
                       description: Matches Google Group
                       items:
