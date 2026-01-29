@@ -130,6 +130,35 @@ var _ = Describe("Creating a CloudflareAccessGroup", Label("CloudflareAccessGrou
 			}
 		})
 
+		It("can export gitHubOrganizations to the cloudflare object", func() {
+			accessRule.Spec.Include = []v1alpha1.CloudFlareAccessGroupRule{{
+				GitHubOrganizations: []v1alpha1.GitHubOrganization{
+					{
+						Name:               "myGitHubOrg1",
+						Team:               "myTeam1",
+						IdentityProviderID: "00000000-0000-0000-0000-00000000000000",
+					},
+					{
+						Name:               "myGitHubOrg2",
+						IdentityProviderID: "11111111-1111-1111-1111-111111111111",
+					},
+				}},
+			}
+			for i, org := range accessRule.Spec.Include[0].GitHubOrganizations {
+				Expect(accessRule.ToCloudflare().Include[i]).To(Equal(cloudflare.AccessGroupGitHub{
+					GitHubOrganization: struct {
+						Name               string "json:\"name\""
+						Team               string "json:\"team,omitempty\""
+						IdentityProviderID string "json:\"identity_provider_id\""
+					}{
+						Name:               org.Name,
+						Team:               org.Team,
+						IdentityProviderID: org.IdentityProviderID,
+					},
+				}))
+			}
+		})
+
 		It("can export oidcClaims to the cloudflare object", func() {
 			accessRule.Spec.Include = []v1alpha1.CloudFlareAccessGroupRule{{
 				OIDCClaims: []v1alpha1.OIDCClaim{

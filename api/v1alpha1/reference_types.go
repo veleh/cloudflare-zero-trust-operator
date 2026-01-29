@@ -36,6 +36,15 @@ type OktaGroup struct {
 	IdentityProviderID string `json:"identityProviderId"`
 }
 
+type GitHubOrganization struct {
+	// Name of the GitHub organization
+	Name string `json:"name"`
+	// Team within the GitHub organization (optional)
+	Team string `json:"team,omitempty"`
+	// Identity Provider Id
+	IdentityProviderID string `json:"identityProviderId"`
+}
+
 type OIDCClaim struct {
 	// Name of the OIDC claim
 	Name string `json:"name"`

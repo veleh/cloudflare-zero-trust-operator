@@ -92,6 +92,9 @@ type CloudFlareAccessGroupRule struct {
 	// Okta Groups
 	OktaGroup []OktaGroup `json:"oktaGroup,omitempty"`
 
+	// GitHub Organizations
+	GitHubOrganizations []GitHubOrganization `json:"gitHubOrganizations,omitempty"`
+
 	// OIDC Claims
 	OIDCClaims []OIDCClaim `json:"oidcClaims,omitempty"`
 }
@@ -214,6 +217,10 @@ func (c CloudFlareAccessGroupRuleGroups) TransformCloudflareRuleFields(managedCF
 
 			for _, oktaGroup := range field.OktaGroup {
 				*managedCFFields[i] = append(*managedCFFields[i], cfapi.NewAccessGroupOktaGroup(oktaGroup.Name, oktaGroup.IdentityProviderID))
+			}
+
+			for _, gitHubOrg := range field.GitHubOrganizations {
+				*managedCFFields[i] = append(*managedCFFields[i], cfapi.NewAccessGroupGitHubOrganization(gitHubOrg.Name, gitHubOrg.Team, gitHubOrg.IdentityProviderID))
 			}
 
 			for _, oidcClaim := range field.OIDCClaims {

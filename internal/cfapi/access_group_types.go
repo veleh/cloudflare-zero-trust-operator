@@ -112,6 +112,20 @@ func NewAccessGroupOktaGroup(name string, identityProviderID string) cloudflare.
 	}
 }
 
+func NewAccessGroupGitHubOrganization(name string, team string, identityProviderID string) cloudflare.AccessGroupGitHub {
+	return cloudflare.AccessGroupGitHub{
+		GitHubOrganization: struct {
+			Name               string `json:"name"`
+			Team               string `json:"team,omitempty"`
+			IdentityProviderID string `json:"identity_provider_id"`
+		}{
+			Name:               name,
+			Team:               team,
+			IdentityProviderID: identityProviderID,
+		},
+	}
+}
+
 func NewAccessGroupOIDCClaim(name string, value string, identityProviderID string) AccessGroupOIDCClaim {
 	return AccessGroupOIDCClaim{
 		OIDC: struct {

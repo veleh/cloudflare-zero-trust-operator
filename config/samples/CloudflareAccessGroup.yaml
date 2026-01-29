@@ -14,3 +14,8 @@ spec:
     - emails:
       - testemail1@domain.com
       - testemail2@domain.com
+    # Example of GitHub organization authentication
+    - gitHubOrganizations:
+      - name: my-github-org
+        team: my-team
+        identityProviderId: 00000000-0000-0000-0000-000000000000
