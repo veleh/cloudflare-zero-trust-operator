@@ -1,4 +1,4 @@
-module github.com/bojanzelic/cloudflare-zero-trust-operator
+module github.com/veleh/cloudflare-zero-trust-operator
 
 go 1.23.0
 
