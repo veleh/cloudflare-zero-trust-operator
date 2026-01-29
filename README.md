@@ -102,6 +102,10 @@ spec:
         - oktaGroup:
           - name: my-okta-group
             identityProviderId: 10000000-0000-0000-0000-00000000000000
+        - gitHubOrganizations:
+          - name: my-github-org
+            team: my-team
+            identityProviderId: 20000000-0000-0000-0000-00000000000000
 ```
 
 ## Advanced Usage
