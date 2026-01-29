@@ -3,7 +3,7 @@ package services
 import (
 	"context"
 
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
 	"github.com/go-logr/logr"
 	"github.com/pkg/errors"
 	"sigs.k8s.io/controller-runtime/pkg/client"

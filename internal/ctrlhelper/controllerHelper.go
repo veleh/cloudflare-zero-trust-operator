@@ -4,8 +4,8 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/api/v1alpha1"
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/cfapi"
+	"github.com/veleh/cloudflare-zero-trust-operator/api/v1alpha1"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfapi"
 	"github.com/cloudflare/cloudflare-go"
 	"github.com/pkg/errors"
 	"sigs.k8s.io/controller-runtime/pkg/client"

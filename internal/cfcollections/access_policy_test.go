@@ -1,7 +1,7 @@
 package cfcollections_test
 
 import (
-	"github.com/bojanzelic/cloudflare-zero-trust-operator/internal/cfcollections"
+	"github.com/veleh/cloudflare-zero-trust-operator/internal/cfcollections"
 	"github.com/cloudflare/cloudflare-go"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
