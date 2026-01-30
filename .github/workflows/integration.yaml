@@ -8,9 +8,7 @@ on:
       - main
   push:
     branches:
-      - 'main'
-    tags:
-      - '*'
+      - 'temp-integration-tests'
       
 concurrency: 
   group: integration_tests
