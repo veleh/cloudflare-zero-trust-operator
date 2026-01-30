@@ -57,8 +57,8 @@ jobs:
             
             <h2>📦 Installation</h2>
             <pre>helm repo add veleh https://veleh.github.io/cloudflare-zero-trust-operator
-helm repo update
-helm install cloudflare-zero-trust-operator veleh/cloudflare-zero-trust-operator</pre>
+              helm repo update
+              helm install cloudflare-zero-trust-operator veleh/cloudflare-zero-trust-operator</pre>
             
             <h2>📚 Documentation</h2>
             <p>For more information, visit the <a href="https://github.com/veleh/cloudflare-zero-trust-operator">GitHub repository</a>.</p>
