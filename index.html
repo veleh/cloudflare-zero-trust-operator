@@ -28,13 +28,29 @@
     fetch('index.yaml')
       .then(r => r.text())
       .then(yaml => {
-        const entries = yaml.match(/- name: (.*?)\n.*?version: (.*?)\n/g) || [];
+        const lines = yaml.split('\n');
         const ul = document.getElementById('charts');
-        entries.forEach(entry => {
-          const name = entry.match(/name: (.*)/)[1];
-          const version = entry.match(/version: (.*)/)[1];
-          ul.innerHTML += '<li><strong>' + name + '</strong> - version ' + version + '</li>';
-        });
+        let currentName = '';
+        
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          if (line.includes('name:') && !line.includes('cloudflare-zero-trust-operator:')) {
+            const match = line.match(/name:\s*(.+)/);
+            if (match) currentName = match[1].trim();
+          }
+          if (line.includes('version:') && currentName) {
+            const match = line.match(/version:\s*(.+)/);
+            if (match) {
+              const version = match[1].trim();
+              ul.innerHTML += '<li><strong>' + currentName + '</strong> - version ' + version + '</li>';
+              currentName = '';
+            }
+          }
+        }
+        
+        if (ul.innerHTML === '') {
+          ul.innerHTML = '<li>No charts available yet</li>';
+        }
       });
   </script>
 </body>
