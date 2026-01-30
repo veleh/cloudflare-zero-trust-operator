@@ -107,14 +107,10 @@ jobs:
           readarray -t TAGS <<< "${{ steps.meta.outputs.tags }}"
           
           for TAG in "${TAGS[@]}"; do
-            MANIFEST_IMAGES=""
-            for CACHE in "amd64"; do
-              MANIFEST_IMAGES="$MANIFEST_IMAGES ${TAG}-$CACHE"
-            done
+            # For single architecture, just create an alias
+            # The platform-specific tag has -amd64 suffix added by the build job
+            PLATFORM_TAG="${TAG}-amd64"
             
-            # Trim leading space from MANIFEST_IMAGES
-            MANIFEST_IMAGES="${MANIFEST_IMAGES# }"
-
-            echo "Creating manifest list for ${TAG} with images: ${MANIFEST_IMAGES}"
-            docker buildx imagetools create -t ${TAG} ${MANIFEST_IMAGES}
+            echo "Creating manifest for ${TAG} from ${PLATFORM_TAG}"
+            docker buildx imagetools create -t ${TAG} ${PLATFORM_TAG}
           done
